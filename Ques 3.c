@@ -1,12 +1,15 @@
 #include <stdio.h>
 int main(){
-	int x;
-	for(x=1; x <= 10; x++){
-		if(x == 5){
-			continue;
-		}
-		printf("%d ", x);
+	int num, sum=0;
+	
+	while(1){
+		printf("Enter numbers (Negative numbers to stop): ");
+		scanf("%d", &num);
+		if(num<0)
+			break;
+		sum = sum + num;
 	}
-	printf("\nUsed continue to skip printing the value 5");
+	printf("Sum of entered numbers is: %d", sum);
+	
 	return 0;
 }

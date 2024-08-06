@@ -1,12 +1,20 @@
 #include <stdio.h>
 int main(){
-	int x;
-	for(x=1; x <= 10; x++){
-		if(x == 5){
-			break;
-		}
-		printf("%d ", x);
+	int table, len;
+	printf("Enter the table number: ");
+	scanf("%d", &table);
+	printf("Enter the length of the table: ");
+	scanf("%d", &len);
+	
+	if(len>100){
+		printf("Error! Table length can't be exceed to 100\n");
 	}
-	printf("\nBroke out of loop at x == %d", x);
+	
+	else{
+		int i;
+		for(i=1;i<=len;i++){
+			printf("%d X %d = %d\n", table,i,table*i);
+		}
+	}
 	return 0;
 }
